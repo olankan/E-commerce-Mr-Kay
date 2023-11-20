@@ -10,7 +10,7 @@ class ShipmentTracking extends StatelessWidget {
   Widget build(BuildContext context) {
     return ReusableCard(
       color: AppColor.cardBg2,
-      height: 300.h,
+      height: 350.h,
       width: 390.w,
       child: Column(
         children: [
@@ -48,7 +48,7 @@ class ShipmentTracking extends StatelessWidget {
             height: 28.h,
           ),
           ReusableCard(
-              height: 220.h,
+              height: 270.h,
               width: 360.w,
               color: AppColor.cardBg1,
               elevation: 0,
@@ -59,7 +59,7 @@ class ShipmentTracking extends StatelessWidget {
                     height: 10.h,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 18.0, top: 7).r,
+                    padding: const EdgeInsets.only(left: 18.0, top: 17).r,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -67,25 +67,25 @@ class ShipmentTracking extends StatelessWidget {
                           'Track Shipment',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 14.sp,
+                            fontSize: 16.sp,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
                         SizedBox(
-                          height: 10.h,
+                          height: 15.h,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 18.0),
                           child: ReusableCard(
                             borderRadius: BorderRadius.circular(15),
-                            height: 50.h,
+                            height: 60.h,
                             width: 340.w,
                             color: AppColor.cardBg3,
                             elevation: 0,
                             child: Padding(
                               padding: const EdgeInsets.only(
                                 left: 18.0,
-                                top: 18,
+                                top: 23,
                               ).r,
                               child: Text(
                                 'Enter Your Shipment Code',
@@ -99,13 +99,13 @@ class ShipmentTracking extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 10.h,
+                          height: 15.h,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 18.0),
                           child: ReusableCard(
                             borderRadius: BorderRadius.circular(15),
-                            height: 50.h,
+                            height: 60.h,
                             width: 340.w,
                             color: AppColor.cardBg3,
                             elevation: 0,
@@ -141,8 +141,8 @@ class ShipmentTracking extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.only(right: 18.0),
                             child: ReusableCard(
-                                height: 35,
-                                width: 100,
+                                height: 45,
+                                width: 120,
                                 elevation: 0,
                                 color: AppColor.primaryColor,
                                 child: Center(
@@ -150,7 +150,7 @@ class ShipmentTracking extends StatelessWidget {
                                   'Track Now',
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 12.sp,
+                                    fontSize: 14.sp,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ))),

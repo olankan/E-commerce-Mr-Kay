@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mr_kay_ui/constants/app_colors.dart';
 import 'package:mr_kay_ui/presentation/dashboard/Reusable_Widgets/Reusable_card.dart';
 import 'package:mr_kay_ui/presentation/dashboard/Widgets/current_shipping.dart';
+import 'package:mr_kay_ui/presentation/dashboard/Widgets/orderHistory.dart';
 import 'package:mr_kay_ui/presentation/dashboard/Widgets/shipmentTracking.dart';
 
 class Dashboard extends StatelessWidget {
@@ -92,9 +93,10 @@ class Dashboard extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                   SizedBox(height: 70.h,),
+                SizedBox(
+                  height: 150.h,
+                ),
                 CurrentShipping(),
-                
                 SizedBox(
                   height: 20.h,
                 ),
@@ -102,11 +104,7 @@ class Dashboard extends StatelessWidget {
                 SizedBox(
                   height: 20.h,
                 ),
-                ReusableCard(
-                  height: 150.h,
-                  width: 390.w,
-                  child: null,
-                ),
+              OrderHistory()
               ],
             ),
           )
