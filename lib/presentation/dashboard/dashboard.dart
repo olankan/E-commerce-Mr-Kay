@@ -89,24 +89,28 @@ class Dashboard extends StatelessWidget {
               ),
             ],
           ),
-          SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  height: 150.h,
+          Column(
+            children: [
+              SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      height: 150.h,
+                    ),
+                    CurrentShipping(),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    ShipmentTracking(),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                  OrderHistory()
+                  ],
                 ),
-                CurrentShipping(),
-                SizedBox(
-                  height: 20.h,
-                ),
-                ShipmentTracking(),
-                SizedBox(
-                  height: 20.h,
-                ),
-              OrderHistory()
-              ],
-            ),
+              ),
+            ],
           )
         ],
       ),

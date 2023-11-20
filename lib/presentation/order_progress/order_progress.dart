@@ -16,20 +16,25 @@ class OrderProgress extends StatelessWidget {
       backgroundColor: AppColor.cardBg3,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0).r,
           child: Column(
             children: [
               Row(
                 children: [
-                  ReusableCard(
-                    height: 50.h,
-                    width: 50.w,
-                    elevation: 0,
-                    borderRadius: BorderRadius.circular(20),
-                    child: Center(
-                      child: Icon(
-                        Icons.arrow_back_ios_new_rounded,
-                        color: AppColor.primaryColor,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: ReusableCard(
+                      height: 50.h,
+                      width: 50.w,
+                      elevation: 0,
+                      borderRadius: BorderRadius.circular(20),
+                      child: Center(
+                        child: Icon(
+                          Icons.arrow_back_ios_new_rounded,
+                          color: AppColor.primaryColor,
+                        ),
                       ),
                     ),
                   ),

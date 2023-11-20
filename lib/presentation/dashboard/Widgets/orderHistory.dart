@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mr_kay_ui/constants/app_colors.dart';
 import 'package:mr_kay_ui/presentation/dashboard/Reusable_Widgets/Reusable_card.dart';
+import 'package:mr_kay_ui/presentation/order_progress/order_progress.dart';
 
 class OrderHistory extends StatelessWidget {
   const OrderHistory({super.key});
@@ -53,68 +54,77 @@ class OrderHistory extends StatelessWidget {
               SizedBox(
                 width: 120.w,
               ),
-              Padding(
-                padding: EdgeInsets.only(top: 0).r,
-                child: Row(
-                  children: [
-                    Text(
-                      'Show all',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w700,
-                      ),
+              Row(
+                children: [
+                  Text(
+                    'Show all',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12.sp,
+                      fontWeight: FontWeight.w700,
                     ),
-                    Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: AppColor.primaryColor,
-                      size: 13.r,
-                    ),
-                  ],
-                ),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: AppColor.primaryColor,
+                    size: 13.r,
+                  ),
+                ],
               )
             ],
           ),
           SizedBox(
             height: 20.h,
           ),
-          ReusableCard(
-              height: 80.h,
-              width: 360.w,
-              elevation: 0,
-              color: AppColor.primaryColor,
-              child: Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Text(
-                      'ID: GYD9809346',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 17.sp,
-                        fontWeight: FontWeight.w300,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => OrderProgress(),
+                ),
+               );
+            },
+            child: ReusableCard(
+                height: 80.h,
+                width: 360.w,
+                elevation: 0,
+                color: AppColor.primaryColor,
+                child: Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        'ID: GYD9809346',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 17.sp,
+                          fontWeight: FontWeight.w300,
+                        ),
                       ),
-                    ),
-                    SizedBox(width: 20.w,),
-                    ReusableCard(
-                      height: 30,
-                      width: 70,
-                      elevation: 0,
-                      color: Color(0xffC77159),
-                      child: Center(
-                        child: Text(
-                          'Transit',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12.sp,
-                            fontWeight: FontWeight.w700,
+                      SizedBox(
+                        width: 20.w,
+                      ),
+                      ReusableCard(
+                        height: 30,
+                        width: 70,
+                        elevation: 0,
+                        color: Color(0xffC77159),
+                        child: Center(
+                          child: Text(
+                            'Transit',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12.sp,
+                              fontWeight: FontWeight.w700,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ))
+                    ],
+                  ),
+                )),
+          )
         ],
       ),
     );
