@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mr_kay_ui/presentation/dashboard/dashboard.dart';
+import 'package:mr_kay_ui/presentation/order_progress/order_progress.dart';
 
 void main() => runApp(
       MyApp(),
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       builder: (_, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: const Dashboard(),
+          home: OrderProgress(),
         );
       },
     );

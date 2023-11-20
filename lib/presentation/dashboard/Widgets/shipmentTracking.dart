@@ -80,7 +80,7 @@ class ShipmentTracking extends StatelessWidget {
                             borderRadius: BorderRadius.circular(15),
                             height: 60.h,
                             width: 340.w,
-                            color: AppColor.cardBg3,
+                            color: AppColor.cardBg2,
                             elevation: 0,
                             child: Padding(
                               padding: const EdgeInsets.only(
@@ -107,7 +107,7 @@ class ShipmentTracking extends StatelessWidget {
                             borderRadius: BorderRadius.circular(15),
                             height: 60.h,
                             width: 340.w,
-                            color: AppColor.cardBg3,
+                            color: AppColor.cardBg2,
                             elevation: 0,
                             child: Center(
                               child: Row(

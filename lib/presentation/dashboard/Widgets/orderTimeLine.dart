@@ -10,21 +10,28 @@ class OrderTimeline extends StatelessWidget {
     required this.isLast,
     this.color,
     required this.indicatorColor,
+    this.direction,
+    this.height,
+    this.width,
   });
 
   final bool isFirst;
   final bool isLast;
   final Color? color;
   final Color indicatorColor;
+  final TimelineAxis? direction;
+  final double? height;
+  final double? width;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 20.h,
-      width: 97.h,
+    
+      height: height ?? 20.h,
+      width: width ?? 97.h,
       child: TimelineTile(
         indicatorStyle: IndicatorStyle(color: indicatorColor),
-        axis: TimelineAxis.horizontal,
+        axis: direction ?? TimelineAxis.horizontal,
         isFirst: isFirst,
         isLast: isLast,
         beforeLineStyle: LineStyle(

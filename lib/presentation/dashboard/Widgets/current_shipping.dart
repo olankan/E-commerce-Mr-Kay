@@ -13,7 +13,7 @@ class CurrentShipping extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ReusableCard(
-            color: AppColor.cardBg3,
+            color: AppColor.cardBg2,
       height: 200.h,
       width: 390.w,
       child: Column(
